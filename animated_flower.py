@@ -80,7 +80,7 @@ filtered_polys = [polygon for polygon in result_polys if polygon.area > threshol
 # remove outer circle fragments
 complete_polys = [polygon for polygon in filtered_polys if (polygon.centroid.x**2 + polygon.centroid.y**2 < 4**2)]
 
-
+# center coordinates
 centroidCoords = [
     Point(0.9999999999999997, -0.5773635180985456),
     Point(1.5000000000000004, -0.866025403785),
@@ -158,7 +158,7 @@ triangles = [polygon for polygon in complete_polys if polygon.area < limit]
 petals = [polygon for polygon in complete_polys if polygon.area > limit]
 
 
-# matrix things
+# create a matrix for defining positional relationships
 from numpy import NaN
 flower_matrix = np.array([
 #      0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23
@@ -305,7 +305,7 @@ ax.set_aspect('equal')
 
 
 
-# here's where I start trying to animate
+# animation
 
 metadata = dict(title = "Movie", artist = "LMo")
 writer = PillowWriter(fps=1, metadata=metadata)
