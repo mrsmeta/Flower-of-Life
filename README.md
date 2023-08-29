@@ -1,6 +1,6 @@
 # Flower-of-Life
 
-Various scripts all generating versions of a geometric "flower of life". Python scripts use shapely, matplotlib, and hsluv to generate and color overlapping geometries. 
+Various scripts all generating versions of a geometric "flower of life". Python scripts use shapely, matplotlib, and hsluv to generate and color overlapping geometries. Geometric segments can be numbered for a color-by-number appearance. 
 
 ![circles](https://github.com/mrsmeta/Flower-of-Life/assets/88294245/f45813ac-801e-44b9-b21b-ad0a9bc7b0a9)
 
